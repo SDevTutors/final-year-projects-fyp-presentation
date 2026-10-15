@@ -1,3 +1,147 @@
+/*********************************************
+ * NAVY THEME (overrides reveal.js black theme)
+ *********************************************/
+:root {
+	--navy: #1f3a60;
+	--navy-deep: #152a48;
+	--accent: #f2b84b;
+	--text-soft: #dbe4f0;
+	--link: #8fc8ff;
+	--link-hover: #c4e2ff;
+}
+
+.reveal-viewport {
+	background: radial-gradient(ellipse at top left, #2b4c7a 0%, var(--navy) 45%, var(--navy-deep) 100%);
+}
+
+.reveal {
+	font-size: 34px;
+	color: var(--text-soft);
+}
+
+.reveal ::selection {
+	color: var(--navy-deep);
+	background: var(--accent);
+}
+
+.reveal a {
+	color: var(--link);
+}
+
+.reveal a:hover {
+	color: var(--link-hover);
+}
+
+/* Headings: Title Case as written (no forced uppercase), accent underline */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	color: #ffffff;
+	text-transform: none;
+	letter-spacing: 0.01em;
+}
+
+.reveal h3 {
+	display: inline-block;
+	padding-bottom: 0.25em;
+	margin-bottom: 0.8em;
+	border-bottom: 4px solid var(--accent);
+}
+
+/* Lists: left aligned with accent bullets */
+.reveal ul {
+	display: block;
+	margin-left: 0;
+	list-style: none;
+}
+
+.reveal ul li {
+	position: relative;
+	padding-left: 1.2em;
+	margin: 0.45em 0;
+	line-height: 1.35;
+}
+
+.reveal ul li::before {
+	content: "";
+	position: absolute;
+	left: 0.2em;
+	top: 0.55em;
+	width: 0.4em;
+	height: 0.4em;
+	border-radius: 50%;
+	background: var(--accent);
+}
+
+.reveal ul ul {
+	margin-top: 0.2em;
+	font-size: 0.85em;
+}
+
+.reveal ul ul li::before {
+	background: transparent;
+	border: 2px solid var(--accent);
+	box-sizing: border-box;
+}
+
+/* Images */
+.reveal section img {
+	border-radius: 10px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.reveal section footer img {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/* Quote-style paragraph under an image */
+.reveal section img + p {
+	font-style: italic;
+	color: #b9c7da;
+	font-size: 0.75em;
+}
+
+/* Title slide */
+#TitleSlide {
+	text-align: center;
+	padding-top: 1.5em;
+}
+
+#TitleSlide h3 {
+	font-size: 2em;
+}
+
+#TitleSlide address {
+	font-style: normal;
+}
+
+#TitleSlide address p {
+	margin: 0.15em 0;
+}
+
+#TitleSlide footer {
+	margin-top: 1.5em;
+	color: #9fb1c9;
+}
+
+/* Controls & progress bar */
+.reveal .controls {
+	color: var(--accent);
+}
+
+.reveal .progress {
+	color: var(--accent);
+}
+
+.reveal .slide-number {
+	background-color: rgba(0, 0, 0, 0.25);
+	color: var(--text-soft);
+}
+
 .external {
 	background-image: url(../img/external-link.svg);
 	background-position: center right;
